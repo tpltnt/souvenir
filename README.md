@@ -16,3 +16,5 @@
 - archive material
 - provide some context information
 - provide checksums for tamper resistance
+
+*license*: [WTFPL v2](http://sam.zoy.org/wtfpl/)
