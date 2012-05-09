@@ -18,3 +18,7 @@
 - provide checksums for tamper resistance
 
 *license*: [WTFPL v2](http://sam.zoy.org/wtfpl/)
+
+*dependencies*:
+- [Xvfb](http://www.x.org/)
+- [GNU core utilities](http://www.gnu.org/software/coreutils/)
