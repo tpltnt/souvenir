@@ -17,8 +17,9 @@
 - provide some context information
 - provide checksums for tamper resistance
 
-*license*: [WTFPL v2](http://sam.zoy.org/wtfpl/)
+*license*: [WTFPL v2](http://sam.zoy.org/wtfpl/) (unless noted otherwise)
 
 *dependencies*:
 - [Xvfb](http://www.x.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
+- [python-webkit2png](https://github.com/AdamN/python-webkit2png/)
