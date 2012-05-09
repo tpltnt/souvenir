@@ -26,76 +26,76 @@
 check_tools(){
     which wget
     if [[ 0 -ne $? ]]
-	then
-	echo "wget not found ... please install it"
+    then
+	echo "wget not found ... please install it" >&2
 	exit 1
-	fi
+    fi
 
     which sha224sum
     if [[ 0 -ne $? ]]
-	then
-	echo "sha224sum not found ... please install GNU coreutils"
+    then
+	echo "sha224sum not found ... please install GNU coreutils" >&2
 	exit 1
-	fi
+    fi
 
     which sha256sum
     if [[ 0 -ne $? ]]
-	then
-	echo "sha256sum not found ... please install GNU coreutils"
+    then
+	echo "sha256sum not found ... please install GNU coreutils" >&2
 	exit 1
-	fi
+    fi
 
     which sha384sum
     if [[ 0 -ne $? ]]
-	then
-	echo "sha384sum not found ... please install GNU coreutils"
+    then
+	echo "sha384sum not found ... please install GNU coreutils" >&2
 	exit 1
-	fi
+    fi
 
     which sha512sum
     if [[ 0 -ne $? ]]
-	then
-	echo "sha512sum not found ... please install GNU coreutils"
+    then
+	echo "sha512sum not found ... please install GNU coreutils" >&2
 	exit 1
-	fi
+    fi
 
     which tar
     if [[ 0 -ne $? ]]
-	then
-	echo "tar not found ... please install it"
+    then
+	echo "tar not found ... please install it" >&2
 	exit 1
-	fi
+    fi
 
     which whois
     if [[ 0 -ne $? ]]
-	then
-	echo "whois not found ... please install it"
+    then
+	echo "whois not found ... please install it" >&2
 	exit 1
-	fi
+    fi
 
 }
 
 if [[ -z $1 ]]
 then
-    echo "no argument given ..."
+    echo "no argument given ..." >&2
     exit 255
 fi
 
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
 # create working directory
-echo "creating directory structure ..."
+echo "creating directory structure ..." >&1
 mkdir -p ${timestamp}/rawdata
 cd ${timestamp}/rawdata
 #mirror site
 #--input-file=file
-echo "starting to mirror ..."
+echo "starting to mirror ..." >&1
 wget --append-output=${timestamp}.log --timestamping --random-wait --no-directories --keep-session-cookies \
 --save-cookies ${timestamp}.cookies --no-check-certificate --recursive --level=1 --convert-links \
 --backup-converted --page-requisites $1
 
 #calculate checksums of downloaded files
-echo "calculating checksums of source files ..."
+echo "calculating checksums of source files ..." >&1
 for sourcefile in `ls`; do
     sha224sum $sourcefile >> checksums.sha224
     sha256sum $sourcefile >> checksums.sha256
@@ -104,25 +104,25 @@ for sourcefile in `ls`; do
 done
 
 #create archive of raw data
-echo "archiving raw data ..."
+echo "archiving raw data ..." >&1
 cd ..
 tar -cjf rawdata.tar.bz2 rawdata
 
-echo "creating checksums of raw data archive ..."
+echo "creating checksums of raw data archive ..." >&1
 sha224sum rawdata.tar.bz2 >> checksums.sha224
 sha256sum rawdata.tar.bz2 >> checksums.sha256
 sha384sum rawdata.tar.bz2 >> checksums.sha384
 sha512sum rawdata.tar.bz2 >> checksums.sha512
 
 exit 23
-echo "removing loose files ..."
+echo "removing loose files ..." >&1
 rm -rf rawdata
 
 exit 23
 #create imagedump
 <insert khtml-foo here>
 
-echo "calculating checksums for image dump ..."
+echo "calculating checksums for image dump ..." >&1
 sha224sum rawdata.tar.bz2 >> checksums.sha224
 sha256sum rawdata.tar.bz2 >> checksums.sha256
 sha384sum rawdata.tar.bz2 >> checksums.sha384
