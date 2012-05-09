@@ -22,4 +22,3 @@
 *dependencies*:
 - [Xvfb](http://www.x.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
-- [python-webkit2png](https://github.com/AdamN/python-webkit2png/)
