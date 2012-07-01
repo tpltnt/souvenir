@@ -25,5 +25,7 @@
 - [AdamN/python-webkit2png](https://github.com/AdamN/python-webkit2png)
 
 *further reading*
+- [Gnu Privacy Guard (GnuPG) Mini Howto (English)](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html)
 - [Henk Penning's Key Signing HOWTO](https://people.apache.org/~henkp/sig/pgp-key-signing.txt)
 - [The Keysigning Party HOWTO](http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html)
+- [Jian Guo, Krystian Matusiewicz (2008-11-25). Preimages for Step-Reduced SHA-2](http://eprint.iacr.org/2009/477.pdf)
