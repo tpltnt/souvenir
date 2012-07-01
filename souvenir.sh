@@ -31,31 +31,10 @@ check_tools(){
 	exit 1
     fi
 
-    which sha224sum
+    which gpg 
     if [[ 0 -ne $? ]]
     then
-	echo "sha224sum not found ... please install GNU coreutils" >&2
-	exit 1
-    fi
-
-    which sha256sum
-    if [[ 0 -ne $? ]]
-    then
-	echo "sha256sum not found ... please install GNU coreutils" >&2
-	exit 1
-    fi
-
-    which sha384sum
-    if [[ 0 -ne $? ]]
-    then
-	echo "sha384sum not found ... please install GNU coreutils" >&2
-	exit 1
-    fi
-
-    which sha512sum
-    if [[ 0 -ne $? ]]
-    then
-	echo "sha512sum not found ... please install GNU coreutils" >&2
+	echo "gpg not found ... please install the GnuPrivacyGuard" >&2
 	exit 1
     fi
 
@@ -97,10 +76,14 @@ wget --append-output=${timestamp}.log --timestamping --random-wait --no-director
 #calculate checksums of downloaded files
 echo "calculating checksums of source files ..." >&1
 for sourcefile in `ls`; do
-    sha224sum $sourcefile >> checksums.sha224
-    sha256sum $sourcefile >> checksums.sha256
-    sha384sum $sourcefile >> checksums.sha384
-    sha512sum $sourcefile >> checksums.sha512
+    gpg --print-md MD5 $sourcefile >> checksums.md5
+    gpg --print-md RMD160 $sourcefile >> checksums.rmd160
+    gpg --print-md SHA1 $sourcefile >> checksums.sha1
+    gpg --print-md SHA160 $sourcefile >> checksums.sha160
+    gpg --print-md SHA224 $sourcefile >> checksums.sha224
+    gpg --print-md SHA256 $sourcefile >> checksums.sha256
+    gpg --print-md SHA384 $sourcefile >> checksums.sha384
+    gpg --print-md SHA512 $sourcefile >> checksums.sha512
 done
 
 #create archive of raw data
