@@ -24,4 +24,5 @@
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
 
 *further reading*
+- [Henk Penning's Key Signing HOWTO](https://people.apache.org/~henkp/sig/pgp-key-signing.txt)
 - [The Keysigning Party HOWTO](http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html)
