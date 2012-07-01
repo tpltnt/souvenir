@@ -26,6 +26,7 @@
 - [GnuPrivacyGuard](http://www.gnupg.org/)
 
 *further reading*
+- [The GNU Privacy Handbook](http://www.gnupg.org/gph/en/manual.html)
 - [Gnu Privacy Guard (GnuPG) Mini Howto (English)](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html)
 - [Henk Penning's Key Signing HOWTO](https://people.apache.org/~henkp/sig/pgp-key-signing.txt)
 - [The Keysigning Party HOWTO](http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html)
