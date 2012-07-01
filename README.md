@@ -23,6 +23,7 @@
 - [Xvfb](http://www.x.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
 - [AdamN/python-webkit2png](https://github.com/AdamN/python-webkit2png)
+- [GnuPrivacyGuard](http://www.gnupg.org/)
 
 *further reading*
 - [Gnu Privacy Guard (GnuPG) Mini Howto (English)](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html)
