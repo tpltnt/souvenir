@@ -62,6 +62,15 @@ check_tools(){
 
 }
 
+# create checksums
+create_checksums(){
+    md5deep -lr $1 >> checksums.md5
+    sha1deep -lr $1 >> checksums.sha1
+    sha256deep -lr $1 >> checksums.sha256
+    tigerdeep -lr $1 >> checksums.tiger
+    whirlpool -lr $1 >> checksums.whirlpool
+}
+
 if [[ -z $1 ]]
 then
     echo "no argument given ..." >&2
@@ -84,14 +93,7 @@ wget --append-output=${timestamp}.log --timestamping --random-wait --no-director
 #calculate checksums of downloaded files
 echo "calculating checksums of source files ..." >&1
 for sourcefile in `ls`; do
-    gpg --print-md MD5 $sourcefile >> checksums.md5
-    gpg --print-md RMD160 $sourcefile >> checksums.rmd160
-    gpg --print-md SHA1 $sourcefile >> checksums.sha1
-    gpg --print-md SHA160 $sourcefile >> checksums.sha160
-    gpg --print-md SHA224 $sourcefile >> checksums.sha224
-    gpg --print-md SHA256 $sourcefile >> checksums.sha256
-    gpg --print-md SHA384 $sourcefile >> checksums.sha384
-    gpg --print-md SHA512 $sourcefile >> checksums.sha512
+    create_checksums $sourcefile
 done
 
 #create archive of raw data
@@ -100,15 +102,7 @@ cd ..
 tar -cjf rawdata.tar.bz2 rawdata
 
 echo "creating checksums of raw data archive ..." >&1
-gpg --print-md MD5 rawdata.tar.bz2 >> checksums.md5
-gpg --print-md RMD160 rawdata.tar.bz2 >> checksums.rmd160
-gpg --print-md SHA1 rawdata.tar.bz2 >> checksums.sha1
-gpg --print-md SHA160 rawdata.tar.bz2 >> checksums.sha160
-gpg --print-md SHA224 rawdata.tar.bz2 >> checksums.sha224
-gpg --print-md SHA256 rawdata.tar.bz2 >> checksums.sha256
-gpg --print-md SHA384 rawdata.tar.bz2 >> checksums.sha384
-gpg --print-md SHA512 rawdata.tar.bz2 >> checksums.sha512
-
+create_checksums rawdata.tar.bz2
 
 echo "removing loose files ..." >&1
 rm -rf rawdata
