@@ -1,3 +1,6 @@
+About
+=====
+
 *what?*: A script to try to battle linkrot/memory holes/disappearing internet sources
 
 *why?*: Research is (in part) about credible sources. Today you might find a certain piece of
@@ -25,11 +28,21 @@
 - [AdamN/python-webkit2png](https://github.com/AdamN/python-webkit2png)
 - [GnuPrivacyGuard](http://www.gnupg.org/)
 
-*further reading*
+References
+==========
+
+General
+-------
 - [The GNU Privacy Handbook](http://www.gnupg.org/gph/en/manual.html)
 - [GnuPG manpage](http://www.gnupg.org/gph/de/manual/r1023.html)
 - [Gnu Privacy Guard (GnuPG) Mini Howto (English)](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html)
 - [Henk Penning's Key Signing HOWTO](https://people.apache.org/~henkp/sig/pgp-key-signing.txt)
 - [The Keysigning Party HOWTO](http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html)
-- [Jian Guo, Krystian Matusiewicz (2008-11-25). Preimages for Step-Reduced SHA-2](http://eprint.iacr.org/2009/477.pdf)
 - [Signatures with PGP](http://www.pgpi.org/doc/pgpintro/#p12)
+
+Cryptography
+------------
+- [Tao Xie and Dengguo Feng (30 May 2009). How To Find Weak Input Differences For MD5 Collision Attacks](http://eprint.iacr.org/2009/223.pdf)
+- [Schneier on Security: More MD5 Collisions](http://www.schneier.com/blog/archives/2005/06/more_md5_collis.html)
+- [Jian Guo, Krystian Matusiewicz (2008-11-25). Preimages for Step-Reduced SHA-2](http://eprint.iacr.org/2009/477.pdf)
+- 
