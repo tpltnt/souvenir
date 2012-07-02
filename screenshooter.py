@@ -1,8 +1,13 @@
 #!/usr/bin/env python
+
+# render websites as images
+# TODO: - autoselect browser
+#       - internal sanity checks
+
 from selenium import webdriver
 
 #browser = webdriver.Chrome(executable_path="/home/user/bin/chrome")
 browser = webdriver.Firefox()
-browser.get('http://www.uni-leipzig.de/')
+browser.get(sys.argv[1])
 browser.save_screenshot('screenshot.png')
 browser.quit()
