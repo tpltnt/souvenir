@@ -92,10 +92,14 @@ cd ..
 tar -cjf rawdata.tar.bz2 rawdata
 
 echo "creating checksums of raw data archive ..." >&1
-sha224sum rawdata.tar.bz2 >> checksums.sha224
-sha256sum rawdata.tar.bz2 >> checksums.sha256
-sha384sum rawdata.tar.bz2 >> checksums.sha384
-sha512sum rawdata.tar.bz2 >> checksums.sha512
+gpg --print-md MD5 rawdata.tar.bz2 >> checksums.md5
+gpg --print-md RMD160 rawdata.tar.bz2 >> checksums.rmd160
+gpg --print-md SHA1 rawdata.tar.bz2 >> checksums.sha1
+gpg --print-md SHA160 rawdata.tar.bz2 >> checksums.sha160
+gpg --print-md SHA224 rawdata.tar.bz2 >> checksums.sha224
+gpg --print-md SHA256 rawdata.tar.bz2 >> checksums.sha256
+gpg --print-md SHA384 rawdata.tar.bz2 >> checksums.sha384
+gpg --print-md SHA512 rawdata.tar.bz2 >> checksums.sha512
 
 
 echo "removing loose files ..." >&1
