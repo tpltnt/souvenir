@@ -33,7 +33,9 @@ About
 Thoughts
 ========
 Different hashing algorithms are used to spread the risk of collision/preimage attacks. MD5 is considered
-harmful but still adds a layer of complexity for forging sources without changing their hash values.
+harmful but still adds a layer of complexity for forging sources without changing their hash values. SHA1
+and SHA2 getting scratched, but aren't broken yet (as of June 2012). The use of free/libre open source
+software is mandatory to have at least some trust in any result provided/derived from this work.
 
 References
 ==========
