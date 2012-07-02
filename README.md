@@ -25,7 +25,7 @@ About
 *dependencies*:
 - [Xvfb](http://www.x.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
-- [AdamN/python-webkit2png](https://github.com/AdamN/python-webkit2png)
+- [Selenium](http://seleniumhq.org/)
 - [GnuPrivacyGuard](http://www.gnupg.org/) ([GnuPG manpage](http://www.gnupg.org/gph/de/manual/r1023.html))
 - [md5deep](http://md5deep.sourceforge.net/) ([manpage](http://md5deep.sourceforge.net/md5deep.html))
 
