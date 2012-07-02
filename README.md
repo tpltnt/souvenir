@@ -30,6 +30,11 @@ About
 - [md5deep](http://md5deep.sourceforge.net/) ([manpage](http://md5deep.sourceforge.net/md5deep.html))
 
 
+Thoughts
+========
+Different hashing algorithms are used to spread the risk of collision/preimage attacks. MD5 is considered
+harmful but still adds a layer of complexity for forging sources without changing their hash values.
+
 References
 ==========
 
