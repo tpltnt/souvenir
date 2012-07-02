@@ -52,3 +52,5 @@ Cryptography
 - [John Kelsey and Stefan Lucks, Collisions and Near-Collisions for Reduced-Round Tiger](http://th.informatik.uni-mannheim.de/People/Lucks/papers/Tiger_FSE_v10.pdf)
 - [Whirlpool homepage](http://www.larc.usp.br/~pbarreto/WhirlpoolPage.html)
 - [Florian Mendel1, Christian Rechberger, Martin Schläffer, Søren S. Thomsen (2009-02-24). "Cryptanalysis of Reduced Whirlpool and Grøstl"](https://www.cosic.esat.kuleuven.be/fse2009/slides/2402_1150_Schlaeffer.pdf)
+- [RIPEMD160 homepage](http://www.esat.kuleuven.ac.be/~bosselae/ripemd160.html)
+- [Xiaoyun Wang; Dengguo Feng; Xuejia Lai; Hongbo Yu (2004-08-17). "Collisions for Hash Functions MD4, MD5, HAVAL-128 and RIPEMD"](http://eprint.iacr.org/2004/199.pdf)
