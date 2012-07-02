@@ -48,3 +48,5 @@ Cryptography
 - [Tao Xie and Dengguo Feng (30 May 2009). How To Find Weak Input Differences For MD5 Collision Attacks](http://eprint.iacr.org/2009/223.pdf)
 - [Schneier on Security: More MD5 Collisions](http://www.schneier.com/blog/archives/2005/06/more_md5_collis.html)
 - [Jian Guo, Krystian Matusiewicz (2008-11-25). Preimages for Step-Reduced SHA-2](http://eprint.iacr.org/2009/477.pdf)
+- [Tiger: A Fast New Hash Function](http://www.cs.technion.ac.il/~biham/Reports/Tiger/tiger/tiger.html)
+- [John Kelsey and Stefan Lucks, Collisions and Near-Collisions for Reduced-Round Tiger](http://th.informatik.uni-mannheim.de/People/Lucks/papers/Tiger_FSE_v10.pdf)
