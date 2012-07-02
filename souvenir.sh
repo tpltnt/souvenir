@@ -111,10 +111,6 @@ xvfb-run --server-args="-screen 0, 640x480x24" python webkit2png-simple.py
 
 exit 23
 echo "calculating checksums for image dump ..." >&1
-sha224sum rawdata.tar.bz2 >> checksums.sha224
-sha256sum rawdata.tar.bz2 >> checksums.sha256
-sha384sum rawdata.tar.bz2 >> checksums.sha384
-sha512sum rawdata.tar.bz2 >> checksums.sha512
 
 #search for witness websites
 #query google, bing, yahoo, chinasuchmaschine
