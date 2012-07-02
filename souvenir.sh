@@ -46,6 +46,13 @@ check_tools(){
 	exit 1
     fi
 
+    which md5deep
+    if [[ 0 -ne $? ]]
+    then
+        echo "md5deep not found ... please install it" >&2
+        exit 1
+    fi
+
     which whois
     if [[ 0 -ne $? ]]
     then
