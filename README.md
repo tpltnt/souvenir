@@ -50,3 +50,5 @@ Cryptography
 - [Jian Guo, Krystian Matusiewicz (2008-11-25). Preimages for Step-Reduced SHA-2](http://eprint.iacr.org/2009/477.pdf)
 - [Tiger: A Fast New Hash Function](http://www.cs.technion.ac.il/~biham/Reports/Tiger/tiger/tiger.html)
 - [John Kelsey and Stefan Lucks, Collisions and Near-Collisions for Reduced-Round Tiger](http://th.informatik.uni-mannheim.de/People/Lucks/papers/Tiger_FSE_v10.pdf)
+- [Whirlpool homepage](http://www.larc.usp.br/~pbarreto/WhirlpoolPage.html)
+- [Florian Mendel1, Christian Rechberger, Martin Schläffer, Søren S. Thomsen (2009-02-24). "Cryptanalysis of Reduced Whirlpool and Grøstl"](https://www.cosic.esat.kuleuven.be/fse2009/slides/2402_1150_Schlaeffer.pdf)
