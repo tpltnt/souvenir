@@ -26,8 +26,8 @@ About
 - [Xvfb](http://www.x.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
 - [AdamN/python-webkit2png](https://github.com/AdamN/python-webkit2png)
-- [GnuPrivacyGuard](http://www.gnupg.org/)
-- [md5deep](http://md5deep.sourceforge.net/)
+- [GnuPrivacyGuard](http://www.gnupg.org/) ([GnuPG manpage](http://www.gnupg.org/gph/de/manual/r1023.html))
+- [md5deep](http://md5deep.sourceforge.net/) ([manpage](http://md5deep.sourceforge.net/md5deep.html))
 
 
 References
@@ -36,7 +36,6 @@ References
 General
 -------
 - [The GNU Privacy Handbook](http://www.gnupg.org/gph/en/manual.html)
-- [GnuPG manpage](http://www.gnupg.org/gph/de/manual/r1023.html)
 - [Gnu Privacy Guard (GnuPG) Mini Howto (English)](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html)
 - [Henk Penning's Key Signing HOWTO](https://people.apache.org/~henkp/sig/pgp-key-signing.txt)
 - [The Keysigning Party HOWTO](http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html)
