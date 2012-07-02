@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # a small script to mirror webpages and add some tamper resistance
+# copyright 2012 by tpltnt <tpltnt.github@dropcut.net>
 #
 # This program is free software. It comes without any warranty, to
 # the extent permitted by applicable law. You can redistribute it
