@@ -71,12 +71,25 @@ create_checksums(){
     whirlpooldeep -lr $1 >> checksums.whirlpool
 }
 
+# get whois information
+get_whois(){
+    domain=`echo $1|awk -F/ '{print $3}'`
+    echo $domain
+    # chop of first part
+    if [[ -n `whois $domain | grep 'Status: invalid'` ]]
+    then
+	echo "have to chop"
+    fi
+}
+
 if [[ -z $1 ]]
 then
     echo "no argument given ..." >&2
     exit 255
 fi
 
+get_whois $1
+exit 42
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
 # create working directory
