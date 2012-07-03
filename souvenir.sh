@@ -135,7 +135,6 @@ python screenshooter $1
 echo "calculating checksums for image dump ..." >&1
 create_checksums screenshot.png
 
-exit 23
 # do whois lookup
 echo "retriving whois data ..." >&1
 domain=`get_domain $1`
@@ -148,6 +147,7 @@ then
     exit 1
 fi
 
+create_checksums whoisdata.txt
 
 #search for witness websites
 #query google, bing, yahoo, chinasuchmaschine
