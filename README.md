@@ -22,7 +22,7 @@ About
 - provide some context information
 - provide checksums & signatures for tamper evidence
 
-*usage*: ./souvenir.sh <URL>
+*usage*: `./souvenir.sh <URL>`
 
 *license*: [WTFPL v2](http://sam.zoy.org/wtfpl/) (unless noted otherwise)
 
@@ -72,11 +72,11 @@ Using cryptographic software is (unfortunatly) not a piece of cake (yet). If
 you do not use GPG on a daily basis, here are some excercies to get you up and
 running. The GNU Privacy Handbook is still very worth a read.
 
-- create keyring for playing
-gpg --no-default-keyring --keyring test.keyring --gen-key
+- create keyring for playing:
+`gpg --no-default-keyring --keyring test.keyring --gen-key`
 
-- list the keys
-gpg --no-default-keyring --keyring test.keyring --list-keys
+- list the keys:
+`gpg --no-default-keyring --keyring test.keyring --list-keys`
 
 References
 ==========
