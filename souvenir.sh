@@ -76,7 +76,8 @@ chop_domain(){
     domain=$1
     if [[ -n `whois $domain | grep 'Status: invalid'` ]]
     then
-        # chop off first part & try again                                              chomp=`echo $domain|awk -F. '{print $1}'`
+        # chop off first part & try again
+        chomp=`echo $domain|awk -F. '{print $1}'`
         domain=`echo $domain|sed "s/$chomp.//"`
         chop_domain $domain
     else
@@ -96,7 +97,9 @@ then
     exit 255
 fi
 
-get_domain $1
+
+domain=`get_domain $1`
+whois $domain
 exit 42
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
