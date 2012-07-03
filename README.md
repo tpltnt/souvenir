@@ -3,6 +3,8 @@ About
 
 *what?*: A script to try to battle linkrot/memory holes/disappearing internet sources
 
+*what not?* These scripts to not handle storage itself (bitrot prevention, redundancy etc.), only (more or less) tamper-evidence.
+
 *why?*: Research is (in part) about credible sources. Today you might find a certain piece of
       information only on the internet and not on dead tree anymore. Think for example about
       a blogpost when you are a social scientist. Are there any good dead tree data sources
