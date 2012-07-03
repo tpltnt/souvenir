@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # a small script to mirror webpages and add some tamper resistance
 # copyright 2012 by tpltnt <tpltnt.github@dropcut.net>
@@ -68,7 +68,7 @@ create_checksums(){
     sha1deep -lr $1 >> checksums.sha1
     sha256deep -lr $1 >> checksums.sha256
     tigerdeep -lr $1 >> checksums.tiger
-    whirlpool -lr $1 >> checksums.whirlpool
+    whirlpooldeep -lr $1 >> checksums.whirlpool
 }
 
 if [[ -z $1 ]]
@@ -107,12 +107,15 @@ create_checksums rawdata.tar.bz2
 echo "removing loose files ..." >&1
 rm -rf rawdata
 
-exit 23
 #create imagedump
-xvfb-run --server-args="-screen 0, 640x480x24" python webkit2png-simple.py
+python screenshooter $1
+echo "calculating checksums for image dump ..." >&1
+create_checksums screenshot.png
 
 exit 23
-echo "calculating checksums for image dump ..." >&1
+# do whois lookup
+echo "retriving whois data ..." >&1
+whois $1
 
 #search for witness websites
 #query google, bing, yahoo, chinasuchmaschine
