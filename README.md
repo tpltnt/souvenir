@@ -29,6 +29,7 @@ About
 *dependencies*:
 - [GNU Bash](http://www.gnu.org/s/bash)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
+- [GNU Wget](https://www.gnu.org/software/wget/)
 - [Selenium](http://seleniumhq.org/) (via [pip](pypi.python.org/pypi/pip/))
 - [GnuPrivacyGuard](http://www.gnupg.org/) ([GnuPG manpage](http://www.gnupg.org/gph/de/manual/r1023.html))
 - [md5deep](http://md5deep.sourceforge.net/) ([manpage](http://md5deep.sourceforge.net/md5deep.html))
