@@ -72,6 +72,12 @@ Using cryptographic software is (unfortunatly) not a piece of cake (yet). If
 you do not use GPG on a daily basis, here are some excercies to get you up and
 running. The GNU Privacy Handbook is still very worth a read.
 
+- create keyring for playing
+gpg --no-default-keyring --keyring test.keyring --gen-key
+
+- list the keys
+gpg --no-default-keyring --keyring test.keyring --list-keys
+
 References
 ==========
 
