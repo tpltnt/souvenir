@@ -71,15 +71,23 @@ create_checksums(){
     whirlpooldeep -lr $1 >> checksums.whirlpool
 }
 
-# get whois information
-get_whois(){
-    domain=`echo $1|awk -F/ '{print $3}'`
-    echo $domain
-    # chop of first part
+# recursivly chop stuff
+chop_domain(){
+    domain=$1
     if [[ -n `whois $domain | grep 'Status: invalid'` ]]
     then
-	echo "have to chop"
+        # chop off first part & try again                                              chomp=`echo $domain|awk -F. '{print $1}'`
+        domain=`echo $domain|sed "s/$chomp.//"`
+        chop_domain $domain
+    else
+        echo $domain
     fi
+}
+
+# get domain
+get_domain(){
+    domain=`echo $1|awk -F/ '{print $3}'`
+    chop_domain $domain
 }
 
 if [[ -z $1 ]]
@@ -88,7 +96,7 @@ then
     exit 255
 fi
 
-get_whois $1
+get_domain $1
 exit 42
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
