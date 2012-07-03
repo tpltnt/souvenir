@@ -96,6 +96,10 @@ running. The GNU Privacy Handbook is still very worth a read.
   - creates a clear signature (textfilecontent + signature frame)
   - file-extension: .asc
 
+- create detached signature: `gpg --no-default-keyring --keyring test.keyring --default-key <signing-key-id> --output <signature filename>.sig --detach-sig <file to be signed>`
+
+  - detached signature is a binary file
+
 References
 ==========
 
