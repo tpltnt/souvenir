@@ -97,10 +97,6 @@ then
     exit 255
 fi
 
-
-domain=`get_domain $1`
-whois $domain
-exit 42
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
 # create working directory
@@ -139,7 +135,16 @@ create_checksums screenshot.png
 exit 23
 # do whois lookup
 echo "retriving whois data ..." >&1
-whois $1
+domain=`get_domain $1`
+whois $domain >> whoisdata.txt
+if [[ -n `grep "Error: 55000000002 \
+Connection refused; access control \
+limit exceeded" whoisdata.txt` ]]
+then
+    echo "whois lookup blocked, please wait and try later" >&2
+    exit 1
+fi
+
 
 #search for witness websites
 #query google, bing, yahoo, chinasuchmaschine
