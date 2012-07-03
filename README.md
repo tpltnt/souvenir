@@ -20,7 +20,9 @@ About
 - get current snapshot
 - archive material
 - provide some context information
-- provide checksums for tamper resistance
+- provide checksums & signatures for tamper evidence
+
+*usage*: ./souvenir.sh <URL>
 
 *license*: [WTFPL v2](http://sam.zoy.org/wtfpl/) (unless noted otherwise)
 
