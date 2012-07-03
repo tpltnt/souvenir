@@ -40,26 +40,31 @@ Thoughts
 
 Design
 ------
-Different hashing algorithms are used to spread the risk of collision/preimage attacks. MD5 is considered
-harmful but still adds a layer of complexity for forging sources without changing their hash values. SHA1
-and SHA2 getting scratched, but aren't broken yet (as of June 2012). The use of free/libre open source
-software is mandatory to have at least some trust in any result provided/derived from this work. The use
-of public key encryption is needed to provide opportunities for checks without compromising the signing
-process. A self-contained system can not provide a chain of trust, since the system has to be trusted
-(e.g. to remove information like the signing key) which is equal to trusting the system that nothing was
-modified (see time-capsule argument below). Thus we could get rid of the crypto hassle and nothing has
-changed in terms of trustworthiness.
+Different hashing algorithms are used to spread the risk of collision/preimage
+attacks. MD5 is considered harmful but still adds a layer of complexity for
+forging sources without changing their hash values. SHA1 and SHA2 getting
+scratched, but aren't broken yet (as of June 2012). The use of free/libre open
+source software is mandatory to have at least some trust in any result
+provided/derived from this work. The use of public key encryption is needed to
+provide opportunities for checks without compromising the signing process. A
+self-contained system can not provide a chain of trust, since the system has to
+be trusted (e.g. to remove information like the signing key) which is equal to
+trusting the system that nothing was modified (see time-capsule argument
+below). Thus we could get rid of the crypto hassle and nothing has changed in
+terms of trustworthiness.
 
 
 Attacks
 -------
-Relying on keys with a short (thus limited) lifetime is foolish. First, GnuPG depends on the system time
-to enforce expirations. Anyone with the ability to manipulate the clock is able to forge signatures after
-their intended lifetime. Any piece of information that can be created can be stored (practically) forever,
-thus be used in future forgeries. In more common terms: If you find a time-capsule with a newspaper, the
-only thing you know is that the time capsule could not have been burried *before* the publication, but at
-any time later. Someone could just have bought the newpaper and stored it for 20 years to then put it into
-the capsule.
+Relying on keys with a short (thus limited) lifetime is foolish. First, GnuPG
+depends on the system time to enforce expirations. Anyone with the ability to
+manipulate the clock is able to forge signatures after their intended lifetime.
+Any piece of information that can be created can be stored (practically)
+forever, thus be used in future forgeries. In more common terms: If you find a
+time-capsule with a newspaper, the only thing you know is that the time capsule
+could not have been burried *before* the publication, but at any time later.
+Someone could just have bought the newpaper and stored it for 20 years to then
+put it into the capsule.
 
 GnuPG playground
 ----------------
