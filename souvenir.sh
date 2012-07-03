@@ -106,8 +106,11 @@ cd ${timestamp}/rawdata
 #mirror site
 #--input-file=file
 echo "starting to mirror ..." >&1
-wget --append-output=${timestamp}.log --timestamping --random-wait --no-directories --keep-session-cookies \
---save-cookies ${timestamp}.cookies --no-check-certificate --recursive --level=1 --convert-links \
+wget --append-output=${timestamp}.log --timestamping --random-wait \
+--no-directories --keep-session-cookies \
+--save-cookies ${timestamp}.cookies --no-check-certificate \
+--local-encoding=utf-8 \
+--recursive --level=1 --convert-links \
 --backup-converted --page-requisites $1
 
 #calculate checksums of downloaded files
