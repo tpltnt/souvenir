@@ -90,6 +90,11 @@ running. The GNU Privacy Handbook is still very worth a read.
   - follow instructions and make sensible choices
   - check for new key by listing the keys in your keyring
 
+- create a clear signature:
+`gpg --no-default-keyring --keyring test.keyring --default-key <signing-key-id> --clearsign <file to be signed>`
+
+  - creates a clear signature (textfilecontent + signature frame)
+  - file-extension: .asc
 
 References
 ==========
