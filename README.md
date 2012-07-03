@@ -78,6 +78,17 @@ running. The GNU Privacy Handbook is still very worth a read.
 - list the keys:
 `gpg --no-default-keyring --keyring test.keyring --list-keys`
 
+  - if you make changes to a key, keep the fingerprint in mind (the first 5/8 charackters after "pub")
+
+- edit keys (e.g. add subkey for signing):
+`gpg --no-default-keyring --keyring test.keyring --edit-key <key-id>`
+
+  - enter: `addkey`
+  - select option 4
+  - follow instructions and make sensible choices
+
+
+
 References
 ==========
 
