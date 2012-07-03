@@ -61,7 +61,11 @@ only thing you know is that the time capsule could not have been burried *before
 any time later. Someone could just have bought the newpaper and stored it for 20 years to then put it into
 the capsule.
 
-
+GnuPG playground
+----------------
+Using cryptographic software is (unfortunatly) not a piece of cake (yet). If
+you do not use GPG on a daily basis, here are some excercies to get you up and
+running. The GNU Privacy Handbook is still very worth a read.
 
 References
 ==========
