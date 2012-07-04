@@ -4,6 +4,7 @@
 # TODO: - autoselect browser
 #       - internal sanity checks
 
+import sys
 from selenium import webdriver
 
 #browser = webdriver.Chrome(executable_path="/home/user/bin/chrome")
