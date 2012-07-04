@@ -148,9 +148,9 @@ echo "removing loose files ..." >&1
 rm -rf rawdata
 
 #create imagedump
-#python screenshooter $1
-#echo "calculating checksums for image dump ..." >&1
-#create_checksums screenshot.png
+python screenshooter $1
+echo "calculating checksums for image dump ..." >&1
+create_checksums screenshot.png
 
 # do whois lookup
 echo "retriving whois data ..." >&1
