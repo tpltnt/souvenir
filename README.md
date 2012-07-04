@@ -27,7 +27,7 @@ About
 *license*: [WTFPL v2](http://sam.zoy.org/wtfpl/) (unless noted otherwise)
 
 *dependencies*:
-- [GNU Bash](http://www.gnu.org/s/bash)
+- [Z shell](http://www.zsh.org/)
 - [GNU core utilities](http://www.gnu.org/software/coreutils/)
 - [GNU Wget](https://www.gnu.org/software/wget/)
 - [Selenium](http://seleniumhq.org/) (via [pip](pypi.python.org/pypi/pip/))

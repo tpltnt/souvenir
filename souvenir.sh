@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # a small script to mirror webpages and add some tamper resistance
 # copyright 2012 by tpltnt <tpltnt.github@dropcut.net>
