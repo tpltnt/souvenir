@@ -52,6 +52,11 @@ be trusted (e.g. to remove information like the signing key) which is equal to
 trusting the system that nothing was modified (see time-capsule argument
 below). Thus we could get rid of the crypto hassle and nothing has changed in
 terms of trustworthiness.
+This PoC has some assumptions:
+
+- The author is trustworthy until the signatures are published
+- The hosting computer can be trusted
+- None manipulates the sources between fetching and signing them
 
 
 Attacks
