@@ -109,6 +109,12 @@ fi
 
 #timestamp format: year-month-day_hours-minutesOFFSET(unixtime)
 timestamp=`date +%F_%H-%M%z_%s`
+
+# set up cryptostuff
+keyid="48034655"
+keyring="test.keyring"
+
+
 # create working directory
 echo "creating directory structure ..." >&1
 mkdir -p ${timestamp}/rawdata
@@ -131,9 +137,9 @@ done
 # create signatures for hashes
 echo "creating signatures of hash files ..." >&1
 keyid="48034655"
-keyring="../../playground/test.keyring"
+keyringpath="../../playground/"+$keyring
 for filename in `ls | grep checksums`; do
-    create_detached_signature $filename $keyid $keyring
+    create_detached_signature $filename $keyid $keyringpath
 done
 
 #create archive of raw data
@@ -170,17 +176,15 @@ create_checksums whoisdata.txt
 echo $1 >> url.txt
 create_checksums url.txt
 
-# setup up crypto stuff
-keyid="48034655"
-keyring="../playground/test.keyring"
+# do the signatures
+keyringpath="../playground/"+$keyring
 for filename in `ls | grep checksums`; do
-    create_detached_signature $filename $keyid $keyring
+    create_detached_signature $filename $keyid $keyringpath
 done
 
 # get out & pack everything up
 cd ..
 tar -cjf $timestamp.tar.bz2 $timestamp
 create_checksums $timestamp.tar.bz2
-keyid="48034655"
-keyring="./playground/test.keyring"
-create_detached_signature $timestamp.tar.bz2 $keyid $keyring
+keyringpath="./playground/"+$keyring
+create_detached_signature $timestamp.tar.bz2 $keyid $keyringpath
