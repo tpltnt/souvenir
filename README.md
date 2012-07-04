@@ -3,7 +3,7 @@ About
 
 *what?*: A script to try to battle linkrot/memory holes/disappearing internet sources
 
-*what not?* These scripts to not handle storage itself (bitrot prevention, redundancy etc.), only (more or less) tamper-evidence.
+*what not?* These scripts to not handle storage itself (bitrot prevention, redundancy etc.), only (more or less) tamper-evidence. All this code is a proof of concept. There are some flaws because of the tools and how they are used. Again, this is experimental, not production ready code.
 
 *why?*: Research is (in part) about credible sources. Today you might find a certain piece of
       information only on the internet and not on dead tree anymore. Think for example about
