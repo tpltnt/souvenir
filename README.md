@@ -78,17 +78,17 @@ you do not use GPG on a daily basis, here are some excercies to get you up and
 running. The GNU Privacy Handbook is still very worth a read.
 
 - create keyring for playing:
-`gpg --no-default-keyring --keyring test.keyring --gen-key`
+`gpg --no-default-keyring --keyring ./test.keyring --charset utf8 --gen-key`
 
 - list the keys:
-`gpg --no-default-keyring --keyring test.keyring --list-keys`
+`gpg --no-default-keyring --keyring ./test.keyring --list-keys`
 
   - if you make changes to a key, keep the fingerprint in mind (the first 5/8 charackters after "pub")
   - first subkey listed is used for encryption
   - extra subkey needed for signing
 
 - edit keys (e.g. add subkey for signing):
-`gpg --no-default-keyring --keyring test.keyring --edit-key <key-id>`
+`gpg --no-default-keyring --keyring ./test.keyring --charset utf8 --edit-key <key-id>`
 
   - enter: `addkey`
   - select option 4
@@ -96,12 +96,12 @@ running. The GNU Privacy Handbook is still very worth a read.
   - check for new key by listing the keys in your keyring
 
 - create a clear signature:
-`gpg --no-default-keyring --keyring test.keyring --default-key <signing-key-id> --clearsign <file to be signed>`
+`gpg --no-default-keyring --keyring ./test.keyring --charset utf8 --default-key <signing-key-id> --clearsign <file to be signed>`
 
   - creates a clear signature (textfilecontent + signature frame)
   - file-extension: .asc
 
-- create detached signature: `gpg --no-default-keyring --keyring test.keyring --default-key <signing-key-id> --output <signature filename>.sig --detach-sig <file to be signed>`
+- create detached signature: `gpg --no-default-keyring --keyring ./test.keyring --default-key <signing-key-id> --charset utf8 --output <signature filename>.sig --detach-sig <file to be signed>`
 
   - detached signature is a binary file
 
