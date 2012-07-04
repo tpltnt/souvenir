@@ -136,7 +136,6 @@ for sourcefile in `ls`; do
 done
 # create signatures for hashes
 echo "creating signatures of hash files ..." >&1
-keyid="48034655"
 keyringpath="../../playground/"+$keyring
 for filename in `ls | grep checksums`; do
     create_detached_signature $filename $keyid $keyringpath
