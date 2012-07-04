@@ -62,6 +62,15 @@ check_tools(){
 
 }
 
+# create signingkey
+# ... utterly stupid to do this way in production code
+# so remember, this is a PoC!
+create_signingkey(){
+    masterkeyid=$1
+    passphrase=$2
+    keyring=$3
+}
+
 # create checksums
 create_checksums(){
     md5deep -lr $1 >> checksums.md5
@@ -149,7 +158,8 @@ fi
 
 create_checksums whoisdata.txt
 
-#search for witness websites
-#query google, bing, yahoo, chinasuchmaschine
-#checksums over witnesslist
-#whois lookup + checksum
+# setup up crypto stuff
+passphrase=`head /dev/random | sha526deep`
+masterkeyid="2048R/4A51DC97"
+keyring="./test.keyring"
+create_signingkey $masterkeyid $passphrase $keyring
