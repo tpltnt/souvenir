@@ -153,7 +153,7 @@ echo "removing loose files ..." >&1
 rm -rf rawdata
 
 #create imagedump
-python screenshooter $1
+python screenshooter.py $1
 echo "calculating checksums for image dump ..." >&1
 create_checksums screenshot.png
 
@@ -192,6 +192,3 @@ create_detached_signature $timestamp.tar.bz2 $keyid $keyringpath
 for filename in `ls | grep checksums`; do
     mv $filename `echo $filename | sed -i "s/checksum/$timestamp/"`
 done
-
-
-
