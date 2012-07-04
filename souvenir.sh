@@ -62,12 +62,10 @@ check_tools(){
 
 }
 
-# create signingkey
-# ... utterly stupid to do this way in production code
-# so remember, this is a PoC!
-create_signingkey(){
-    masterkeyid=$1
-    passphrase=$2
+# create detached signature for a file
+create_detached_signature(){
+    filetobesigned=$1
+    signingkeyid=$2
     keyring=$3
 }
 
@@ -159,7 +157,6 @@ fi
 create_checksums whoisdata.txt
 
 # setup up crypto stuff
-passphrase=`head /dev/random | sha526deep`
-masterkeyid="2048R/4A51DC97"
+keyid="48034655"
 keyring="./test.keyring"
-create_signingkey $masterkeyid $passphrase $keyring
+create_detached_signature $filename $keyid $keyring
