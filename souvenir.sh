@@ -190,5 +190,5 @@ keyringpath="./playground/"+$keyring
 create_detached_signature $timestamp.tar.bz2 $keyid $keyringpath
 # rename final checksum files
 for filename in `ls | grep checksums`; do
-    mv $filename `echo $filename | sed -i "s/checksum/$timestamp/"`
+    mv $filename `echo $filename | sed "s/checksum/${timestamp}/"`
 done
