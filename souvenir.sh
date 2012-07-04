@@ -184,6 +184,14 @@ done
 # get out & pack everything up
 cd ..
 tar -cjf $timestamp.tar.bz2 $timestamp
+rm -rf $timestamp
 create_checksums $timestamp.tar.bz2
 keyringpath="./playground/"+$keyring
 create_detached_signature $timestamp.tar.bz2 $keyid $keyringpath
+# rename final checksum files
+for filename in `ls | grep checksums`; do
+    mv $filename `echo $filename | sed -i "s/checksum/$timestamp/"`
+done
+
+
+
