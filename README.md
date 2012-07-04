@@ -57,7 +57,7 @@ This PoC has some assumptions:
 - The author is trustworthy until the signatures are published
 - The hosting computer can be trusted
 - None manipulates the sources between fetching and signing them
-
+- An (established) keypair for the author exists
 
 Attacks
 -------
