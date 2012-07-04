@@ -128,6 +128,13 @@ echo "calculating checksums of source files ..." >&1
 for sourcefile in `ls`; do
     create_checksums $sourcefile
 done
+# create signatures for hashes
+echo "creating signatures of hash files ..." >&1
+keyid="48034655"
+keyring="../../playground/test.keyring"
+for filename in `ls | grep checksums`; do
+    create_detached_signature $filename $keyid $keyring
+done
 
 #create archive of raw data
 echo "archiving raw data ..." >&1
@@ -141,9 +148,9 @@ echo "removing loose files ..." >&1
 rm -rf rawdata
 
 #create imagedump
-python screenshooter $1
-echo "calculating checksums for image dump ..." >&1
-create_checksums screenshot.png
+#python screenshooter $1
+#echo "calculating checksums for image dump ..." >&1
+#create_checksums screenshot.png
 
 # do whois lookup
 echo "retriving whois data ..." >&1
@@ -159,7 +166,21 @@ fi
 
 create_checksums whoisdata.txt
 
+# save URL
+echo $1 >> url.txt
+create_checksums url.txt
+
 # setup up crypto stuff
 keyid="48034655"
-keyring="./test.keyring"
-create_detached_signature $filename $keyid $keyring
+keyring="../playground/test.keyring"
+for filename in `ls | grep checksums`; do
+    create_detached_signature $filename $keyid $keyring
+done
+
+# get out & pack everything up
+cd ..
+tar -cjf $timestamp.tar.bz2 $timestamp
+create_checksums $timestamp.tar.bz2
+keyid="48034655"
+keyring="./playground/test.keyring"
+create_detached_signature $timestamp.tar.bz2 $keyid $keyring
