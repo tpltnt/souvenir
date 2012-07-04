@@ -67,6 +67,9 @@ create_detached_signature(){
     filetobesigned=$1
     signingkeyid=$2
     keyring=$3
+
+    gpg --no-default-keyring --keyring $keyring --default-key $signingkeyid \
+    --output $filetobesigned.sig --detach-sig $filetobesigned
 }
 
 # create checksums
